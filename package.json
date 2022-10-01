@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "@faker-js/faker": "^7.5.0",
+    "cypress": "10.8.0",
+    "cypress-fail-fast": "^5.0.1",
+    "cypress-grep": "3.0.3",
+    "cypress-repeat": "^2.3.3",
+    "deepmerge": "^4.2.2",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^6.0.1"
+  },
+  "scripts": {
+    "openChromeDisableWebSec": "npx cypress open --config chromeWebSecurity=false",
+    "smokes_chrome": "npx cypress run --env grepTags='@smoke' --browser chrome --config chromeWebSecurity=false",
+    "smokes_electron": "npx cypress run --env grepTags='@smoke'"
+  }
+}
