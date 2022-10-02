@@ -13,6 +13,10 @@
   "scripts": {
     "openChromeDisableWebSec": "npx cypress open --config chromeWebSecurity=false",
     "smokes_chrome": "npx cypress run --env grepTags='@smoke' --browser chrome --config chromeWebSecurity=false",
-    "smokes_electron": "npx cypress run --env grepTags='@smoke'"
+    "smokes_ipad": "npx cypress run --env grepTags='@smoke' --browser chrome --config viewportHeight=1024,viewportWidth=768",
+    "all_chrome": "npx cypress run --env grepTags='@all' --browser chrome --config chromeWebSecurity=false"
+  },
+  "dependencies": {
+    "cypress-localstorage-commands": "^2.2.1"
   }
 }

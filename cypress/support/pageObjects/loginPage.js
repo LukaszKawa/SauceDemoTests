@@ -1,6 +1,4 @@
-import basePage from './basePage'
-
-export class loginPage extends basePage {
+export class loginPage {
 	static goTo() {
 		cy.visit(Cypress.config('baseUrl'))
 	}

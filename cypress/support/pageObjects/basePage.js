@@ -6,7 +6,7 @@ export class basePage {
 	}
 
 	static loginWithCookie(login) {
-		return cy.addCookie('session-username', login)
+		return cy.setCookie('session-username', login)
 	}
 }
 export default basePage

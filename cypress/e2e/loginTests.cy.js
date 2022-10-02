@@ -6,8 +6,8 @@ import assertionTexts from '../fixtures/assertionTexts.json'
 describe('Login test cases', () => {
 	beforeEach(() => {
 		loginPage.goTo()
-		cy.clearCookies()
 	})
+
 	it(
 		'checks login for standard_user with valid password',
 		{ tags: ['@smoke', '@all'] },
@@ -36,7 +36,7 @@ describe('Login test cases', () => {
 		cy.url().should('not.contain', Cypress.env('paths').inventoryPage)
 	})
 
-	it('attempt to login without password', { tags: ['@all'] }, () => {
+	it('checks attempt to log in without password', { tags: ['@all'] }, () => {
 		loginPage.enterLogin(users.standardUser.login)
 		loginPage.clickLoginButton()
 		loginPage
@@ -72,7 +72,6 @@ describe('Login test cases', () => {
 				'eq',
 				Cypress.config('baseUrl') + Cypress.env('paths').inventoryPage
 			)
-			loginPage.checkLoggedUser(users.problemUser.login)
 		}
 	)
 
@@ -88,7 +87,6 @@ describe('Login test cases', () => {
 				'eq',
 				Cypress.config('baseUrl') + Cypress.env('paths').inventoryPage
 			)
-			loginPage.checkLoggedUser(users.performanceGlitchUser.login)
 		}
 	)
 })

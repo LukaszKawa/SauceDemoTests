@@ -6,6 +6,8 @@ module.exports = defineConfig({
 		grepOmitFiltered: false,
 		paths: {
 			inventoryPage: '/inventory.html',
+			itemPage: '/inventory-item.html',
+			cartPage: '/cart.html',
 		},
 	},
 	e2e: {
