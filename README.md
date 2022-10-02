@@ -4,10 +4,9 @@
 1. Clone
 2. npm install
 3. npx cypress open
-
-
-npm run smokes_chrome to run smoke tests
-npm run all_chrome to run all tests on chrome
+or 
+3. npm run smokes_chrome to run smoke tests
+3. npm run all_chrome to run all tests on chrome
 
 
 #To do:
